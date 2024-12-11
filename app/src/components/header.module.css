@@ -1,0 +1,146 @@
+/* Header.module.css */
+
+.header {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00070a;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .logo {
+    color: #00ded5;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 2;
+  }
+  
+  .nav {
+    background-color: #1b1b1b;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid #555;
+    transition: right 0.3s;
+  }
+  
+  .navLinks {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navLinks li {
+    margin: 0 15px;
+  }
+  
+  .navLinks li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .navLinks li a:hover {
+    background-color: #032C3E;
+    color: #00ded5;
+  }
+  
+  .connectWallet {
+    color: #00121d;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #00ded5;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .connectWallet:hover {
+    background-color: #0088cc;
+  }
+  
+  .connectWalletMobile {
+    display: none;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+    z-index: 2;
+  }
+  
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 900px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100vh;
+      background-color: #111;
+      border-radius: 0;
+      padding: 80px 20px 20px;
+      z-index: 1;
+    }
+  
+    .nav.active {
+      right: 0;
+    }
+  
+    .navLinks {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .connectWalletDesktop {
+      display: none;
+    }
+  
+    .connectWalletMobile {
+      display: block;
+    }
+  
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+    }
+  
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .connectWalletMobile {
+      display: block;
+      margin-top: 20px;
+    }
+  }

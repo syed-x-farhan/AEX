@@ -1,0 +1,139 @@
+/* Home.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.heroSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+    background-color: #01070a;
+    color: #ffffff;
+    padding: 0 40px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .leftSection {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .leftSection h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .leftSection p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .gradientText {
+    background: linear-gradient(90deg, #00ded5, #007bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  
+  .connectButton {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .connectButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .rightSection {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  }
+  
+  .heroImage {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  @media screen and (min-width: 600px) {
+    .heroSection {
+      flex-direction: row;
+    }
+  
+    .leftSection {
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+  
+  @media screen and (max-width: 599px) {
+    .heroSection {
+        flex-direction: column;
+    }
+
+    .rightSection {
+        order: 2;
+        margin-top: -100px; /* Increase the negative margin to move the image higher */
+    }
+}
+  
+/* Add padding to the entire page */
+.page {
+  min-height: 100vh;
+  padding: 0 30px;
+  background-color: #01070a;
+  color: #ffffff;
+  overflow-y: auto;
+}
+
+/* Features Section */
+.featuresSection {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.featuresContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.featureCard {
+  background-color: #08121a;
+  border: 1px solid #1f2f38;
+  border-radius: 10px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+}
+
+.featureCard h3 {
+  margin-top: 10px;
+}
+
+.featureCard p {
+  margin-top: 5px;
+}
+
+html, body {
+  height: 100%;
+  overflow: auto;
+}

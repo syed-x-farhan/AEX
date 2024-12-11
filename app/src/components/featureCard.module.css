@@ -1,0 +1,56 @@
+/* featurecard.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.featureCard {
+  background-color: #00070a;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid #d3d3d3;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: calc(33.33% - 16px); /* Adjust width for three cards per row */
+  margin: 8px;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  border-color: #00e1d9;
+  border: 3px solid #00e1d9;
+
+}
+
+.iconContainer {
+  background-color: #00e1d9;
+  border-radius: 50%;
+  padding: 16px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 16px 0 8px;
+  color: #00e1d9;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  color: #dcdcdc;
+  font-weight: 400;
+}
+
+/* Center the last card in the second row */
+.featureCard:nth-child(4) {
+  width: 33.33%;
+}
